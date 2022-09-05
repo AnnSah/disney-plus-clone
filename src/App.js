@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Switch from "react-router-dom/Switch"
 import Detail from './components/Detail';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <Header />
 
         <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/detail">
             <Detail />
           </Route>
@@ -24,8 +28,8 @@ function App() {
           <Route path="/">
             <Home />
           </Route>
+
         </Switch>
-        
       </Router>
     </div>
   );
