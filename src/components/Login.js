@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { auth } from '../firebase';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
+    const history = useHistory();
+
+    const button = () => {
+        history.push("/");
+    }
     return (
         <Container>
             <CTA>
                 <CTALogoOne src="/images/cta-logo-one.svg" />
-                <SignUp>GET ALL THERE</SignUp>
+                <SignUp onClick={button}>GET ALL THERE</SignUp>
                 <Description>Get Premier Access to Raya and the Last Dragon for an additional fee with a Disney+ subscription. As of 03/26/22, the price of Disney+ and The Disney Bundle will increase by $1.</Description>
                 <Description>
                     <CTALogoTwo src="/images/cta-logo-two.png" />
